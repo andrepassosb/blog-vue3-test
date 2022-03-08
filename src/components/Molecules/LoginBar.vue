@@ -1,13 +1,13 @@
 <template>
     <nav class="d-flex flex-row nav-bar_login">
     <router-link to="/login">
-        <button class="btn btn-primary rounded-pill">
-      Log in
+        <button id="login-button" class="btn btn-primary rounded-pill">
+          Log in
         </button>
     </router-link>
     <router-link to="/signup">
-        <button class="btn btn-secondary rounded-pill">
-      Sign up
+        <button id="signup-button" class="btn btn-secondary rounded-pill">
+          Sign up
         </button>
     </router-link>
   </nav>

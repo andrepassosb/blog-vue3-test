@@ -6,13 +6,14 @@
     <div class="input-container">
       <div class="form-control text-start mb-4">
         <label class="position-absolute" for="userId">Usuário ID</label>
-        <input type="text" v-model="state.userId" required>
+        <input type="text" id="login-userID" v-model="state.userId" required>
       </div>
       <div class="form-control text-start mb-4">
         <label class="position-absolute" for="email" >Email</label>
-        <input type="email" v-model="state.email" required>
+        <input type="email" id="login-email" v-model="state.email" required>
       </div>
       <button
+        id="submit-button"
         type="submit"
         :disabled="state.loading"
         class="btn btn-primary rounded-pill mb-3"

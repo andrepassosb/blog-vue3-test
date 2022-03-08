@@ -6,21 +6,22 @@
     <div class="input-container">
       <div class="form-control text-start mb-4">
         <label class="position-absolute" for="userId">Nome</label>
-        <input type="text" v-model="state.name" required>
+        <input type="text" id="name-field" v-model="state.name" required>
       </div>
       <div class="form-control text-start mb-4">
         <label class="position-absolute" for="email">Email</label>
-        <input type="email" id="email" v-model="state.email" required>
+        <input type="email" id="email-field" v-model="state.email" required>
       </div>
       <div class="form-control text-start mb-4">
         <label class="position-absolute" for="gender">Gênero</label>
-        <select name="gender" id="gender" v-model="state.gender" required>
+        <select name="gender" id="gender-field" v-model="state.gender" required>
           <option selected disabled >Selecione</option>
           <option value="female">Feminino</option>
           <option value="male">Masculino</option>
         </select>
       </div>
       <button
+        id="submit-button"
         type="submit"
         :disabled="state.loading"
         class="btn btn-primary rounded-pill mb-3"
@@ -33,7 +34,7 @@
       </button>
         <p class="error">{{ state.error }}</p>
         <p class="sucess">{{ state.sucess }}</p>
-        <h2>{{ state.userId }}</h2>
+        <h2 id="userId" >{{ state.userId }}</h2>
     </div>
   </form>
 </template>
