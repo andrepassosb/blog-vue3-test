@@ -78,7 +78,6 @@ export default {
 <style>
 .TodoView{
   margin-bottom: 55px;
-  min-height: 100vh;
 }
 .page-title{
   padding-left: 16px;

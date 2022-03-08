@@ -33,6 +33,7 @@
           Sign In
       </button>
         <p class="error">{{ state.error }}</p>
+        <p class="error">{{ state.responseError }}</p>
         <p class="sucess">{{ state.sucess }}</p>
         <h2 id="userId" >{{ state.userId }}</h2>
     </div>
@@ -51,15 +52,17 @@ export default {
       email: '',
       name: '',
       gender: '',
-      errors: '',
+      error: '',
+      responseError: '',
       sucess: '',
       userId: '',
       loading: false
     })
     async function handleSignIn () {
-      state.errors = null
+      state.error = null
       state.sucess = ''
       state.userId = ''
+      state.responseError = ''
       const data = {
         name: state.name,
         email: state.email,
@@ -69,12 +72,14 @@ export default {
       if (!state.error) {
         state.loading = true
         const response = await services.users.createUser(data)
+        console.log(response)
         if (response.data) {
           setUser(response.data.id, response.data)
           state.sucess = 'Cadastro realizado com sucesso, realize o login com seu número de usuário:'
           state.userId = response.data.id
         } else {
           state.error = 'Ocorreu um erro tente novamente.'
+          state.responseError = response.menssage.statusText
         }
         state.loading = false
       }
