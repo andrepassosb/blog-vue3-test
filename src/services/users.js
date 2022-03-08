@@ -21,7 +21,6 @@ export default () => ({
   },
   updateUser: (userId, data) => {
     const url = `/users/${userId}`
-    console.log('data', data)
     const response = requestApi(url, 'put', data)
 
     return response

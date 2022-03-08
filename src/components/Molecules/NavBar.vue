@@ -49,7 +49,6 @@ export default {
     })
 
     watch(() => store.Users.users[state.userID], async () => {
-      console.log('mudou')
       state.checkbox = store.Users.users[state.userID].status === 'active'
     })
 

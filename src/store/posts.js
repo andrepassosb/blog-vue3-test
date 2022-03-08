@@ -8,5 +8,4 @@ export default state
 
 export function setPosts (posts) {
   state.allposts = [...posts, ...state.allposts]
-  console.log('setPosts', state.allposts)
 }

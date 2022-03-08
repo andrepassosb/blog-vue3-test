@@ -113,7 +113,6 @@ export default {
             email: store.Users.users[props.userID].email
           }
           const newComment = await services.comments.createComment(data)
-          console.log(newComment)
           if (newComment.data) {
             state.title = ''
             state.post = ''

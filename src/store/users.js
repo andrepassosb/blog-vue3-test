@@ -11,6 +11,5 @@ export function setUser (userId, usersInfo) {
 }
 
 export function setStatus (userId, status) {
-  console.log(userId, status)
   state.users[userId].status = status
 }

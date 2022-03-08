@@ -23,7 +23,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import { reactive, onBeforeMount } from 'vue'
 import ItemTodo from '@/components/Molecules/ItemTodo.vue'
 import useStore from '@/hooks/useStore'
@@ -64,20 +63,8 @@ export default {
         status: 'pending',
         edit: true
       }
-      // const { data } = await services.todos.createTodos(item)
       setTodo([item])
     }
-
-    // function removeItem (e) {
-    //   // state.itemsTodo.forEach((element, index) => {
-    //   //   console.log(index, element)
-    //   //   if (element.id === e) state.itemsTodo.splice(index, 1)
-    //   // })
-    //   console.log(state.itemsTodo)
-    //   console.log('removeItem', e)
-    //   state.itemsTodo.splice(e, 1)
-    //   console.log(state.itemsTodo)
-    // }
 
     return {
       store,

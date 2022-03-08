@@ -41,16 +41,11 @@
 <script>
 import { reactive } from '@vue/reactivity'
 import services from '@/services'
-// import useStore from '@/hooks/useStore'
 import { setUser } from '@/store/users'
-// import { useRouter } from 'vue-router'
 
 export default {
   name: 'LoginView',
   setup () {
-    // const store = useStore()
-    // const router = useRouter()
-
     const state = reactive({
       email: '',
       name: '',
@@ -64,9 +59,6 @@ export default {
       state.errors = null
       state.sucess = ''
       state.userId = ''
-      // if (state.name && state.name.length > 3) state.error = 'Nome invalido'
-      // if (state.name && state.name.length > 3) state.error = 'Nome invalido'
-      // if (state.gender) state.error = 'Campo obrigatorio'
       const data = {
         name: state.name,
         email: state.email,

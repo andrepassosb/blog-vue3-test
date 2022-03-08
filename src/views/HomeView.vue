@@ -24,7 +24,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import { reactive } from 'vue'
 import PostEditor from '@/components/Molecules/PostEditor.vue'
 import Post from '@/components/Molecules/Post.vue'
@@ -46,7 +45,6 @@ export default {
     const state = reactive({
       userID: localStorage.getItem('UserId')
     })
-    console.log(props.loading)
 
     return {
       store,

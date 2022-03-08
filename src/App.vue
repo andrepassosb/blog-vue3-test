@@ -28,14 +28,12 @@ export default {
     })
     watch(() => route.path, async () => {
       state.hasUserId = !!localStorage.getItem('UserId')
-      console.log(state.hasUserId)
     })
 
     onBeforeMount(async () => {
       state.loadingHome = true
       if (store.Posts.allposts.length === 0) {
         const { data: allPosts } = await services.posts.getAllPosts()
-        console.log(allPosts)
         setPosts(allPosts)
       }
       if (!store.Users.users || Object.keys(store.Users.users).length === 0) {
@@ -46,7 +44,6 @@ export default {
       }
       if (store.Comments.allComments.length === 0) {
         const { data: allComments } = await services.comments.getAllComments()
-        console.log('allComments', allComments)
         setComments(allComments)
       }
       state.loadingHome = false
