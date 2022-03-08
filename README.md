@@ -1,5 +1,10 @@
 # gorest-vue-test
 
+## 🚀 Recursos Utilizados
+* **[Vue.js](https://vuejs.org/)**
+* **[Vue CLI](https://cli.vuejs.org/)**
+* **[Bootstrap 5](https://getbootstrap.com/)**
+
 ## Project setup
 ```
 yarn install
